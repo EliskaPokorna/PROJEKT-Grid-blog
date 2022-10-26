@@ -66,3 +66,128 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+
+/*CSS Grid*/
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 0 40px;
+}
+
+h1, h2, p, header, footer {
+	grid-column: 2 / span 1;
+}
+
+figure, blockquote {
+	grid-column: 1 / -1;
+}
+
+.tip-vlevo {
+	grid-column: 1;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+/*Vlastnosti obrázků + textu*/
+
+img {
+	width: 100%;
+}
+
+figure, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	text-align: center;
+	font-size: 40px;
+	color: #b2bec3;
+}
+
+h1 {
+	font-size: 90px;
+	color: #a3cb38;
+}
+
+h2 {
+	font-size: 60px;
+	color: #a3cb38;
+}
+
+.meta, figcaption {
+	color: #c4c6c8;
+}
+
+footer a, footer p {
+	color: #b2becf;
+}
+
+/*Dekorace u nadpisů*/
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 120px;
+	height: 3px;
+	background-color: #d1ea63;
+	margin: 20px auto 20px auto;
+}
+
+/*Levý + pravý pruh*/
+
+.tip {
+	background-color: #edf3f5;
+	padding: 20px;
+	align-self: start;
+	font-size: 14px;
+	color: #8691a8;
+}
+
+.tip-vlevo {
+	border-right: 4px solid #f5a939;
+	text-align: right;
+}
+
+.tip-vlevo a {
+	color: #ee784e;
+}
+
+.tip-vpravo {
+	border-left: 4px solid #f5a939;
+}
+
+.tip-vpravo a {
+	color: #ee784e;
+}
+
+/*Padding a margin*/
+
+p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+h1 {
+	margin: 70px 0;
+}
+
+h2, blockquote {
+	margin-bottom: 20px;
+}
+
+img, footer {
+	margin-top: 30px;
+}
+
+figcaption {
+	margin-bottom: 50px;
+}
+
+
+
